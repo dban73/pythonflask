@@ -1,5 +1,6 @@
 import server
 import db
+import entity.persona_Entity
 import route.persona_route
 
 if __name__ == "__main__":
