@@ -4,6 +4,8 @@ import entity.car_entity
 import route.car_route
 import entity.persona_entity
 import route.persona_route
+import route.upload_route
+import route.download_route
 
 
 if __name__ == "__main__":
