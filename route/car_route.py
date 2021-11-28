@@ -22,7 +22,6 @@ def car_read(id):
 
 @server.app.route('/cars', methods=['GET'])
 def cars_read():
-    # return "API GET carS"
     return car_controller.cars_read()
 
 # UPDATE
