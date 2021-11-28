@@ -11,7 +11,8 @@ def generate_uuid():
 
 class Persona(db.Base, SerializerMixin):
     __tablename__ = 'persona'
-    id = Column(String(256), name="id", primary_key=generate_uuid)
+    id = Column(String(256), name="id",
+                primary_key=True, default=generate_uuid)
     nombre = Column(String(256), nullable=True)
     telefono = Column(String(256), nullable=True)
     email = Column(String(256), nullable=True)

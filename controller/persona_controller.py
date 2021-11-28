@@ -1,5 +1,4 @@
 from flask import request, jsonify
-import server
 import db
 from entity.persona_entity import Persona
 
@@ -57,7 +56,7 @@ def persona_delete(id):
     persona = db.Session.query(Persona).get(id)
     db.Session.detete(persona)
     db.Session.commit()
-    return json(
+    return jsonify(
         status="success",
         data=persona.to_dict()
     )

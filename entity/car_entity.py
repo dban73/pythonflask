@@ -12,7 +12,8 @@ def generate_uuid():
 
 class Car(db.Base, SerializerMixin):
     __tablename__ = 'car'
-    id = Column(String(256), name="id", primary_key=generate_uuid)
+    id = Column(String(256), name="id",
+                primary_key=True, default=generate_uuid)
     color = Column(String(20), nullable=True)
     placa = Column(Integer, nullable=True)
     fabricante = Column(String(50), nullable=True)
