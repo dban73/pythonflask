@@ -54,7 +54,7 @@ def persona_update(id):
 
 def persona_delete(id):
     persona = db.Session.query(Persona).get(id)
-    db.Session.detete(persona)
+    db.Session.delete(persona)
     db.Session.commit()
     return jsonify(
         status="success",
